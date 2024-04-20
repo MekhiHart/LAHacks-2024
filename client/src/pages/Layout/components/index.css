@@ -7,6 +7,9 @@
     justify-content: space-around;
   }
 
-#bottom--navigation--icon{
-  background-color: yellow;
+
+#bottom--navigation .faJar,
+#bottom--navigation .faExpand,
+#bottom--navigation .faUtensils {
+  color: #008000; 
 }
