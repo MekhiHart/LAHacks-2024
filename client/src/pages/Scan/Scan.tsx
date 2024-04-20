@@ -1,4 +1,4 @@
-import CameraComponent from "../../components/CameraComponent"
+import CameraComponent from "../../components/CameraComponent/CameraComponent"
 export default function Scan(){
     return(
         <div id="scan--body">
