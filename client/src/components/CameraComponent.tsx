@@ -18,9 +18,9 @@ export default function CameraComponent () {
           onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri)}}
         />}
 
-      <div>
-        {photo && <img src={photo} alt="Captured" style={{ maxWidth: '80%', maxHeight: '300px'}} />}
-        <p style={{display:"flex",justifyContent:"flex-end", backgroundColor:"yellow"}}>Save Receipt?</p>
+      <div className="flex" style={{flexDirection:"column", justifyItems:"center"}}>
+        {photo && <img src={photo} alt="Captured" style={{ maxWidth: '100%', maxHeight:"300px"}} />}
+        {photo && <p style={{display:"flex",justifyContent:"flex-end"}}>Save Receipt?</p>}
       </div>
 
     </>
