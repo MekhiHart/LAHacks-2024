@@ -7,9 +7,9 @@ export default function BottomNavigation(){
     const navigate = useNavigate();
     return(
     <footer className="flex" id="bottom--navigation">
-        <FontAwesomeIcon onClick={() => { navigate("/"); }} size="2x" icon={faJar}/>
-        <FontAwesomeIcon onClick={() => { navigate("scan"); }} size="2x" icon={faExpand}/>
-        <FontAwesomeIcon onClick={() => { navigate("recipes"); }} size="2x" icon={faUtensils}/>
+        <FontAwesomeIcon className="faJar" onClick={() => { navigate("/"); }} size="2x" icon={faJar}/>
+        <FontAwesomeIcon className="faExpand" onClick={() => { navigate("scan"); }} size="2x" icon={faExpand}/>
+        <FontAwesomeIcon className="faUtensils" onClick={() => { navigate("recipes"); }} size="2x" icon={faUtensils}/>
     </footer>       
     )
 
