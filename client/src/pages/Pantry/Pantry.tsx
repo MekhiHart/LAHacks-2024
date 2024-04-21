@@ -21,7 +21,7 @@ type PantryProps = {
 
 export default function Pantry(props : PantryProps){
     const navigate = useNavigate()
-    const {pantryIngredients, setPantryIngredients} = props
+    const {pantryIngredients} = props
     console.log(pantryIngredients)
     useEffect(() => {
         console.log("type: ", typeof pantryIngredients)

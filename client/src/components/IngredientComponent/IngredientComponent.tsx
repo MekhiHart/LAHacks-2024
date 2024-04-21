@@ -10,7 +10,7 @@ interface IngredientComponentProps{
 }
 
 export default function IngredientComponent(props:IngredientComponentProps){
-    const {name, quantity, expirationDate, weight} = props.IngredientComponentData
+    const {name, quantity, expirationDate} = props.IngredientComponentData
     return(
         <div style={{margin: "-5px 0px 10px 0px"}}>
             {quantity && <h3>({quantity}) {name}</h3>}

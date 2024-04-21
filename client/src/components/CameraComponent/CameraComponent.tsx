@@ -17,7 +17,7 @@ type CameraProps = {
 
 export default function CameraComponent (props:CameraProps) {
   const [photo, setPhoto] = useState<string | null>(null);
-  const {pantryIngredients, setPantryIngredients} = props
+  const {setPantryIngredients} = props
 
   function handleTakePhoto (dataUri:any) {
     // Do stuff with the photo...

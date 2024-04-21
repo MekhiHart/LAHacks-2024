@@ -1,7 +1,7 @@
 import './App.css';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from 'react'; // Import useState hook
+import { useState } from 'react'; // Import useState hook
 
 import Layout from './pages/Layout/Layout';
 import Pantry from './pages/Pantry/Pantry';
