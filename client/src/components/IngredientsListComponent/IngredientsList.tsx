@@ -18,8 +18,9 @@ interface IngredientsListProps {
 
 const IngredientsList: React.FC<IngredientsListProps> = ({ ingredients }) => {
   return (
-    <div className={styles.ingredientsList}>
+    <>
       <h2 className={styles.header}>Save your ingredients!</h2>
+      <div className={styles.ingredientsList} style={{maxHeight:"300px", overflowY:"scroll", overflowX:"hidden"}}>
       {ingredients.map((ingredient) => (
         <IngredientItem
           key={ingredient.id}
@@ -29,6 +30,8 @@ const IngredientsList: React.FC<IngredientsListProps> = ({ ingredients }) => {
         />
       ))}
     </div>
+    </>
+
   );
 };
 

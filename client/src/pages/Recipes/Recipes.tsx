@@ -27,10 +27,6 @@ export default function RecipesPage(props:RecipesPageProps) {
     quantity: `${ingredient.quantity}x`, // Assuming quantity needs to be appended with 'x'
     daysRemaining: calculateDaysRemaining(ingredient.expirationDate), // Implement your logic to calculate daysRemaining
   }));
-  const ingredientsData = [
-    { id: '1', name: 'Garlic Cloves', quantity: '3x', daysRemaining: 1 },
-    { id: '2', name: 'Broccoli', quantity: '50g', daysRemaining: 2 },
-  ];
 
   return (
     <div className={styles.recipesPage}>

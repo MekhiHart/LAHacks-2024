@@ -23,7 +23,7 @@ const IngredientItem: React.FC<IngredientItemProps> = ({ name, quantity, daysRem
   };
 
   return (
-    <div className={styles.ingredientItem}>
+    <div className={styles.ingredientItem} style={{scale:"90%"}}>
       <p className={styles.ingredientName}>{quantity} {name}</p>
       {/* Call the daysRemainingClass() function here to set the class dynamically */}
       <p className={daysRemainingClass()}>{daysRemaining} days remaining</p>
