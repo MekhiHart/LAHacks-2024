@@ -25,6 +25,7 @@ export default function CameraComponent () {
       {!photo &&  <Camera
           idealFacingMode='environment'
           onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri)}}
+          imageType="png"
         />}
 
       <div className="flex" style={{flexDirection:"column", justifyItems:"center"}}>
