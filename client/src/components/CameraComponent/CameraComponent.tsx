@@ -1,3 +1,4 @@
+import "./index.css"
 import { useState} from 'react';
 import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
@@ -13,7 +14,7 @@ export default function CameraComponent () {
   }
 
   function saveReceipt(){
-    // make http request 
+    // make http request to backend
   }
 
   function retakeReceipt(){
@@ -32,8 +33,8 @@ export default function CameraComponent () {
 
         {photo  && 
           <div className="flex" style={{justifyContent:"center"}}> 
-              <button>R</button>
-              <button>G</button>
+              <button className="camera--button" style={{backgroundColor:"red"}} onClick={retakeReceipt}>R</button>
+              <button className="camera--button" style={{backgroundColor:"green"}} onClick={saveReceipt}>G</button>
           </div>}
       </div>
 
