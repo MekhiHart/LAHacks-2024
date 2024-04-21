@@ -1,6 +1,8 @@
 import styles from './Pantry.module.css'
 
 import { useNavigate } from 'react-router-dom';
+import IngredientComponent from '../../components/IngredientComponent/IngredientComponent';
+import { useEffect } from 'react';
 
 type Ingredient = {
     name: string;
@@ -14,9 +16,16 @@ type PantryProps = {
     setPantryIngredients: React.Dispatch<React.SetStateAction<Ingredient[]>>;
 }
 
+
+
+
 export default function Pantry(props : PantryProps){
     const navigate = useNavigate()
     const {pantryIngredients, setPantryIngredients} = props
+    console.log(pantryIngredients)
+    useEffect(() => {
+        console.log("type: ", typeof pantryIngredients)
+    },[pantryIngredients])
  return (
     <div className={styles.container}>
       {pantryIngredients.length === 0 ? (
@@ -27,8 +36,8 @@ export default function Pantry(props : PantryProps){
           </button>
         </div>
       ) : (
-            <h1>Ingredients exist</h1>        
-      )}
+            pantryIngredients.map((ingredient) => <IngredientComponent IngredientComponentData={ingredient}/>)
+        )}
     </div>
   );
 }

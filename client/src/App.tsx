@@ -1,7 +1,7 @@
 import './App.css';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from 'react'; // Import useState hook
+import { useEffect, useState } from 'react'; // Import useState hook
 
 import Layout from './pages/Layout/Layout';
 import Pantry from './pages/Pantry/Pantry';
@@ -17,6 +17,7 @@ type Ingredient = {
 
 function App() {
   const [pantryIngredients, setPantryIngredients] = useState<Ingredient[]>([])
+
   return (
     <BrowserRouter>
       <Routes>

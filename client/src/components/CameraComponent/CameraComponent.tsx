@@ -75,7 +75,10 @@ export default function CameraComponent (props:CameraProps) {
         if (response.ok) {
           console.log("Receipt saved successfully.");
           const res = await response.json()
-          setPantryIngredients(res)
+          const actualRes: Ingredient[] = res.ingridients
+          
+          console.log("res: ", res)
+          setPantryIngredients(actualRes)
           // navigate to recipe page
         } else {
           console.error("Failed to save receipt:", response.statusText);
