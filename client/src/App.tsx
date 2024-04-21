@@ -27,7 +27,7 @@ function App() {
             element={<Pantry pantryIngredients={pantryIngredients} setPantryIngredients={setPantryIngredients} />}
           />
           <Route path='scan' element={<Scan pantryIngredients={pantryIngredients} setPantryIngredients={setPantryIngredients}/>} />
-          <Route path='recipes' element={<Recipes/>} />
+          <Route path='recipes' element={<Recipes pantryIngredients={pantryIngredients} setPantryIngredients={setPantryIngredients}/>} />
         </Route>
       </Routes>
     </BrowserRouter>
