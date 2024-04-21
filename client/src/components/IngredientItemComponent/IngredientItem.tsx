@@ -1,7 +1,7 @@
 // src/components/IngredientItem.tsx
 
 import React from 'react';
-import styles from "./ IngredientItem.module.css"
+import styles from "./IngredientItem.module.css";
 
 interface IngredientItemProps {
   name: string;
