@@ -22,10 +22,7 @@ type PantryProps = {
 export default function Pantry(props : PantryProps){
     const navigate = useNavigate()
     const {pantryIngredients} = props
-    console.log(pantryIngredients)
-    useEffect(() => {
-        console.log("type: ", typeof pantryIngredients)
-    },[pantryIngredients])
+
  return (
     <div className={styles.container}>
       {pantryIngredients.length === 0 ? (
