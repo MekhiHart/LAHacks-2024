@@ -1,8 +1,18 @@
-export default function Recipes(){
+// Example usage in Recipes.tsx
 
-    return (
-        <>
-            <h1>Recipes</h1>
-        </>
-    )
-}
+import IngredientsList from "../../components/IngredientsListComponent/IngredientsList";
+
+const RecipesPage = () => {
+  const ingredientsData = [
+    { id: '1', name: 'Garlic Cloves', quantity: '3x', daysRemaining: 3 },
+    { id: '2', name: 'Broccoli', quantity: '50g', daysRemaining: 5 },
+  ];
+
+  return (
+    <div>
+      <IngredientsList ingredients={ingredientsData} />
+    </div>
+  );
+};
+
+export default RecipesPage;
