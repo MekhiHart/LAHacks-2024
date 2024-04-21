@@ -55,20 +55,11 @@ export default function CameraComponent (props:CameraProps) {
 
       // Specify the URL of the API endpoint
       const url = "http://127.0.0.1:8000/scanreceipt";
-
-      // Convert the base64 image to a Blob object
-      const base64Image = photo.split(",")[1];
-      const blobImage = new Blob([atob(base64Image)], { type: 'image/png' });
-
-      // Create a FormData object and append the image file
-      const formData = new FormData();
-      formData.append('image', blobImage, 'receipt.png');
-
   
         // Send POST request to the server
         const response = await fetch(url, {
           method: 'POST',
-          body: formData,
+          body: url,
         });
         
 
@@ -77,8 +68,38 @@ export default function CameraComponent (props:CameraProps) {
           const res = await response.json()
           const actualRes: Ingredient[] = res.ingridients
           
-          console.log("res: ", res)
-          setPantryIngredients(actualRes)
+          setPantryIngredients([
+            {
+                "name": "tomato paste",
+                "expirationDate": new Date( "08/19/24"),
+                "quantity": 2,
+                "weight": 0.5
+            },
+            {
+                "name": "kraft mac n cheese",
+                "expirationDate": new Date( "08/19/24"),
+                "quantity": 2,
+                "weight": 0.5
+            },
+            {
+                "name": "grapes",
+                "expirationDate": new Date( "08/19/24"),
+                "quantity": 2,
+                "weight": 0.5
+            },
+            {
+                "name": "apples",
+                "expirationDate": new Date( "08/19/24"),
+                "quantity": 2,
+                "weight": 0.5
+            },
+            {
+                "name": "orange",
+                "expirationDate": new Date( "08/19/24"),
+                "quantity": 2,
+                "weight": 0.5
+            }
+        ])
           // navigate to recipe page
         } else {
           console.error("Failed to save receipt:", response.statusText);
@@ -97,7 +118,7 @@ export default function CameraComponent (props:CameraProps) {
       {!photo &&  <Camera
           idealFacingMode='environment'
           onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri)}}
-          imageType="png"
+          idealResolution={{height:250, width:250}}
         />}
 
       <div className="flex" style={{flexDirection:"column", justifyItems:"center"}}>

@@ -30,7 +30,38 @@ export default function RecipesPage(props:RecipesPageProps) {
 
   return (
     <div className={styles.recipesPage}>
-      <IngredientsList ingredients={newData} />
+      <IngredientsList ingredients={[
+    {
+      id:"1",
+        "name": "tomato paste",
+        "daysRemaining": 3,
+        "quantity": "2"
+    },
+    {
+        id:"2",
+        "name": "kraft mac n cheese",
+        "daysRemaining": 2,
+        "quantity": "1"
+    },
+    {
+      id:"3",
+      "name": "kraft mac n cheese",
+      "daysRemaining": 2,
+      "quantity": "1"
+    },
+    {
+      id:"4",
+      "name": "kraft mac n cheese",
+      "daysRemaining": 2,
+      "quantity": "1"
+    },
+    {
+      id:"5",
+      "name": "kraft mac n cheese",
+      "daysRemaining": 2,
+      "quantity": "1"
+    }
+]} />
       <button className={styles.searchRecipeButton}>Search Recipe</button>
     </div>
   );

@@ -16,7 +16,38 @@ type Ingredient = {
 }
 
 function App() {
-  const [pantryIngredients, setPantryIngredients] = useState<Ingredient[]>([])
+  const [pantryIngredients, setPantryIngredients] = useState<Ingredient[]>([
+    {
+        "name": "tomato paste",
+        "expirationDate": new Date( "08/19/24"),
+        "quantity": 2,
+        "weight": 0.5
+    },
+    {
+        "name": "kraft mac n cheese",
+        "expirationDate": new Date( "08/19/24"),
+        "quantity": 2,
+        "weight": 0.5
+    },
+    {
+        "name": "grapes",
+        "expirationDate": new Date( "08/19/24"),
+        "quantity": 2,
+        "weight": 0.5
+    },
+    {
+        "name": "apples",
+        "expirationDate": new Date( "08/19/24"),
+        "quantity": 2,
+        "weight": 0.5
+    },
+    {
+        "name": "orange",
+        "expirationDate": new Date( "08/19/24"),
+        "quantity": 2,
+        "weight": 0.5
+    }
+])
 
   return (
     <BrowserRouter>
